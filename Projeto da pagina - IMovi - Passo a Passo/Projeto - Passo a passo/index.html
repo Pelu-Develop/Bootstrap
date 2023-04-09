@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Bootstrap - iMovi</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Google Fonts - Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    <!-- Bootstrap  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <!-- Icons Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <!-- CSS do Projeto -->
+    <link rel="stylesheet" href="./Style/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <!-- Colocamos a classe "navbar" que é bootstrap, a "navbar-expand-lg" deixa a barra de navegação expandida quando a tela for grande, "fixed-top" deixa a barra fixa no topo da nossa pagina -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+      <!-- A classe "container" limita a largura, e "py-3" da um padding no eixo y de 3 -->
+      <div class="container py-3">
+        <a href="#" class="navbar-brand primary-color">
+          <img src="img/imovi-icon.png" alt="iMovi" />
+          <span>iMovi</span>
+        </a>
+        <!-- "navbar-toggler" é para dizer que o button são para telas menores, "data-bs-toggle" significa que vai ser um botão que vai gerar um collapse,"data-bs-target" eu referencio qual id vai estar relacionado com o botão, os arias são para acessibilidade  -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Estamos pegando um ícone no bootstrap ícone -->
+          <i class="bi bi-list"></i>
+        </button>
+        <!-- o "O collapse" é pra dizer que o elemento vai começar escondido, "navbar-collapse" é pra os itens ficarem abaixo no colapse -->
+        <div class="collapse navbar-collapse" id="navbar-items">
+          <!-- "me-auto" é uma margin automática dos itens,"mb-2" é margin bottom 2,"mb-lg-0" estar dizendo que quando a tela for grande o margin de baixo vai ser 0  -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- "nav-item" é para dizer que são os items da minha nav -->
+            <li class="nav-item">
+              <!-- "nav-link" é pra dizer que são os links da minha nav, "active" é uma classe pra dizer que esse link estar ativo no momento  -->
+              <a href="#" class="nav-link active primary-color" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link primary-color">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link primary-color">Imóveis</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link primary-color">Contatos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- SLIDE -->
+    <div class="container" id="slider-container">
+      <!-- a class "carousel slide" é pra indicar que tipo de carousel dela, "data-bs-rider" é pra dizer quando começa o carrossel, caso coloque carousel, ele começa quando carrega o carrossel -->
+      <div class="carousel slide" id="slider" data-bs-rider="carousel">
+        <!-- "carousel-indicators" é para dizer que vai ter indicadores abaixo do carrossel -->
+        <div class="carousel-indicators">
+          <!-- "button" é para dizer que é um botão,"active" é para dizer que o que estiver apresentando vai estar ativo,"data-bs-target" é para dizer que essa parte estar conectado com o id, "data-bs-slide-to" é para qual slide ele vai quando clicamos no botão -->
+          <button type="button" class="active" data-bs-target="#slider" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- "carousel-inner" é para dizer que essa parte é o que vai ser a parte do bootstrap -->
+        <div class="carousel-inner">
+          <!-- "carousel-item" é para dizer que esse é um item do carrossel, "active" é pra dizer que vai começar com esse active -->
+          <div class="carousel-item active">
+            <!-- Aqui é a imagem do nosso carrossel, "d-block" é pra dar um display block na nossa imagem, "w-100" para dar width de 100% (100% da largura) -->
+            <img src="img/banner-1.jpg" alt="Casa 1" class="d-block w-100" />
+            <!-- "carousel-caption" é para detalhes da imagem, como titulo e subtitulo -->
+            <div class="carousel-caption">
+              <h5>Casas planejadas</h5>
+              <!-- "btn btn-dark" é para colocar um estilo -->
+              <a href="#" class="btn btn-dark">Ver Projetos</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner-2.jpg" alt="Casa 2" class="d-block w-100" />
+            <div class="carousel-caption">
+              <h5>Projetos Complexos</h5>
+              <a href="#" class="btn btn-dark">Ver Projetos</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner-3.jpg" alt="Casa 3" class="d-block w-100" />
+            <div class="carousel-caption">
+              <h5>Projetos Inovadores</h5>
+              <a href="#" class="btn btn-dark">Ver Projetos</a>
+            </div>
+          </div>
+        </div>
+        <!-- "carousel-control-prev" é dizendo que essa parte vai ser a parte responsável para voltar para o slide anterior, e "data-bs-slide" pra falar a funcionalidade que ele vai fazer-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+          <i class="bi bi-chevron-compact-left"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <!-- "carousel-control-prev" é dizendo que essa parte vai ser a parte responsável para voltar para o slide anterior, e "data-bs-slide" pra falar a funcionalidade que ele vai fazer-->
+        <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+          <i class="bi bi-chevron-compact-right"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- MINI BANNERS, é dentro do container de slider -->
+      <!-- "col-12"= Estamos ocupando 12 colunas no mobile/ "col-md-10"= Estamos ocupando 10 colunas no desktop/ "offset-md-1"= na tela de desktop estamos retirando uma coluna para ficar no meio -->
+      <div class="col-12 col-md-10 offset-md-1" id="mini-banners">
+        <!-- Row permite a gente descrever layouts em linha -->
+        <div class="row">
+          <!-- Estamos descrevendo quantas colunas os mini banners vão ocupar -->
+          <div class="col-12 col-md-4">
+            <!-- Estamos usando a função card do bootstrap e alinhando todo o texto ao centro com "text-center" -->
+            <div class="card text-center">
+              <!-- Aqui temos um ícone no começo do card, puxamos um ícone do bootstrap e mudamos a cor dele com "primary-color" que estar no css -->
+              <i class="bi bi-box primary-color"></i>
+              <!-- Classe para adicionar no corpo do card -->
+              <div class="card-body">
+                <!-- Estamos adicionando um titulo no card com a cor primaria -->
+                <h5 class="card-title primary-color">Projetos Completos</h5>
+                <!-- Estamos agora adicionando a descrição do nosso card com a nossa cor secundaria -->
+                <p class="card-text secondary-color">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <!-- Link usando o padrão de botão -->
+                <a href="#" class="btn btn-dark">Saber mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card text-center">
+              <i class="bi bi-layers primary-color"></i>
+              <div class="card-body">
+                <h5 class="card-title primary-color">Você participa também</h5>
+                <p class="card-text secondary-color">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <a href="#" class="btn btn-dark">Saber mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card text-center">
+              <i class="bi bi-lightning-charge primary-color"></i>
+              <div class="card-body">
+                <h5 class="card-title primary-color">Adiantamento de entregas</h5>
+                <p class="card-text secondary-color">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <a href="#" class="btn btn-dark">Saber mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- DESTAQUES, onde vai ficar os projetos em destaque usamos o grid do bootstrap -->
+    <div class="container" id="featured-container">
+      <!-- Adicionamos uma classe "col-12" para dizer que estar dentro vai ocupar 12 colunas -->
+      <div class="col-12">
+        <!-- Estamos colocando o titulo do nosso container e colocando a cor primaria nele -->
+        <h2 class="title primary-color">Trabalhos em Destaque</h2>
+        <!-- Adicionando uma descrição para o nosso container -->
+        <p class="subtitle secondary-color">Conheça nossos projetos mais desafiadores</p>
+      </div>
+      <!-- Tudo que tiver dentro vai ocupar 12 colunas -->
+      <div class="col-12" id="featured-images">
+        <!-- "row" significa a linha da minha coluna, logo estamos trabalhando com grid, e "g-4" significa o gap, o espaço entre os itens  -->
+        <div class="row g-4">
+          <!-- "col-12" As coisas aqui dentro vão ocupar 12 colunas e "col-md-4" é com base a tela de desktop -->
+          <div class="col-12 col-md-4">
+            <!-- a classe "img-fluid" fala pra imagem ocupar toda a div que ela tem disponível -->
+            <img src="img/project-1.jpg" alt="Projeto 1" class="img-fluid" />
+            <!-- Um banner para colocar informações do projeto acima -->
+            <div class="banner-content">
+              <p class="secondary-color">Categoria</p>
+              <h3>Nome do Projeto</h3>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="img/project-2.jpg" alt="Projeto 2" class="img-fluid" />
+            <div class="banner-content">
+              <p class="secondary-color">Categoria</p>
+              <h3>Nome do Projeto</h3>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="img/project-3.jpg" alt="Projeto 3" class="img-fluid" />
+            <div class="banner-content">
+              <p class="secondary-color">Categoria</p>
+              <h3>Nome do Projeto</h3>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="img/project-4.jpg" alt="Projeto 4" class="img-fluid" />
+            <div class="banner-content">
+              <p class="secondary-color">Categoria</p>
+              <h3>Nome do Projeto</h3>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="img/project-5.jpg" alt="Projeto 5" class="img-fluid" />
+            <div class="banner-content">
+              <p class="secondary-color">Categoria</p>
+              <h3>Nome do Projeto</h3>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="img/project-6.jpg" alt="Projeto 6" class="img-fluid" />
+            <div class="banner-content">
+              <p class="secondary-color">Categoria</p>
+              <h3>Nome do Projeto</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- INFO -->
+    <div class="container" id="info-container">
+      <div class="col-12">
+        <h2 class="title primary-color">Detalhes Importantes</h2>
+        <p class="subtitle secondary-color">Saiba mais sobre a experiência da nossa incrível equipe</p>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12 col-md-5" id="info-banner">
+            <img src="img/infobanner.jpg" alt="Informações da Empresa" class="img-fluid" />
+          </div>
+          <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="title primary-color">Estes dados fazem a diferença</h2>
+                <p class="subtitle secondary-color">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex sunt delectus veritatis fugiat voluptatibus, nihil autem tempore vel at, repudiandae libero perspiciatis sint quisquam.
+                  Perspiciatis explicabo quam voluptate quae tenetur!
+                </p>
+              </div>
+              <div class="col-12" id="info-numbers">
+                <div class="row">
+                  <div class="col-4">
+                    <h3 class="primary-color">18</h3>
+                    <p class="secondary-color">Anos na construção civil</p>
+                  </div>
+                  <div class="col-4">
+                    <h3 class="primary-color">95</h3>
+                    <p class="secondary-color">Projetos executados</p>
+                  </div>
+                  <div class="col-4">
+                    <h3 class="primary-color">639</h3>
+                    <p class="secondary-color">Clientes</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <a href="#" class="btn btn-dark">Saber mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <!-- Foi colado um container dentro de um container fluid, para que o bg-dark não respeite o container e sim cubra toda largura da tela -->
+    <footer class="container-fluid bg-dark-color" id="footer">
+      <div class="container">
+        <div class="row">
+          <!-- FOOTER TOP -->
+          <div class="col-12" id="footer-top">
+            <!-- O justify-content-between é do display flex para espaçar os elementos até o final -->
+            <div class="row justify-content-between">
+              <div class="col-4"><h2>IMovi</h2></div>
+              <div class="col-4" id="social-icons">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-youtube"></i>
+                <i class="bi bi-twitter"></i>
+              </div>
+            </div>
+          </div>
+          <!-- FOOTER DETAILS -->
+          <div class="col-12" id="footer-details">
+            <div class="row">
+              <div class="col-12 col-md-4" id="news-container">
+                <h4>Fique por dentro das novidades</h4>
+                <p class="secondary-color">Inscreva-se para saber em primeira mão</p>
+                <form>
+                  <!-- Classe de margin bottom de 3 -->
+                  <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Digite o seu e-mail" />
+                  </div>
+                  <button class="btn btn-dark" type="submit">Inscrever</button>
+                </form>
+              </div>
+              <div class="col-12 col-md-4" id="contact-container">
+                <h4>Formas de contato</h4>
+                <p class="secondary-color">(71)95674-5487</p>
+                <p class="secondary-color">contato@imovi.com</p>
+              </div>
+              <div class="col-12 col-md-4" id="links-container">
+                <div class="row">
+                  <h4>Você pode estar procurando por:</h4>
+                  <div class="col-6">
+                    <!-- List unstyled tira o estilo da lista -->
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="secondary-color">Projetos</a></li>
+                      <li><a href="#" class="secondary-color">Imóveis</a></li>
+                      <li><a href="#" class="secondary-color">Vendas</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="secondary-color">Contratar</a></li>
+                      <li><a href="#" class="secondary-color">Trabalhe Conosco </a></li>
+                      <li><a href="#" class="secondary-color">Contato</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FOOTER BOTTOM -->
+          <div class="col-12" id="footer-bottom">
+            <div class="row justify-content-between">
+              <div class="col-12 col-md-3">
+                <p class="secondary-color">IMovi &copy; 2023</p>
+              </div>
+              <div class="col-12 col-md-3">
+                <p class="secondary-color">Realizamos o seu projeto <i class="bi bi-heart"></i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Meu Script -->
+    <script src="./JS/scripts.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
