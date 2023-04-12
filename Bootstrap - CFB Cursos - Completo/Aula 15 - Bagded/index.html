@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 15 - Badge 2</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="">
+    <div class="container-fluid text-center my-4">
+      <a
+        href="https://getbootstrap.com/docs/5.0/components/badge/"
+        target="_blank"
+        class="p-3 bg-dark text-white link-underline link-underline-opacity-0 border rounded"
+      >
+        Link para a documentação</a
+      >
+    </div>
+<!-- Podemos usar os badges para dar um destaque ao um texto -->
+<!-- Devemos colocar um span no texto que queremos destacar e devemos informar a ele quais cores queremos usar -->
+<!-- Por padrão o badge possui a classe rounded ja nele, poderem podemos mudar esse elemento, colocando por exemplo "rounded-pill" para deixar em formato de pilula -->
+    <div class="container">
+      <h2>CFB Cursos de Bootstrap 5 - <span class="badge bg-primary">Badges</span></h1>
+      <h2>CFB Cursos de Bootstrap 5 - <span class="badge bg-primary rounded-pill">Badges</span></h1>
+        <button type="button" class="btn btn-primary">
+            Curso de Bootstrap - Aula <span class="badge bg-warning">15</span>
+        </button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
